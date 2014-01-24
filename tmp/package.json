@@ -1,0 +1,21 @@
+{
+  "name": "serverfy",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "node-static": "latest"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "devDependencies": {
+  }
+}
