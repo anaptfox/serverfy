@@ -1,4 +1,3 @@
-
 "use strict";
 
 var program = require('commander'),
@@ -9,71 +8,65 @@ var program = require('commander'),
     inquirer = require("inquirer");
 
 program
-  .version('0.0.1')
-  .parse(process.argv);
+    .version('0.0.2')
+    .parse(process.argv);
 
 
 serverfy.on('progress', function(msg) {
 
-  console.log(msg);
+    console.log(msg);
 
 });
 
 
 
 /**
- * Input prompt 
+ * Input prompt
  */
 
-var questions = [
-  {
+var questions = [{
     type: "input",
     name: "baseDirectory",
     message: "Where is the base directory?",
-    default: function () {
-      return cwd;
+    default: function() {
+        return cwd;
     }
-  },
-  {
+}, {
     type: "confirm",
     name: "skip",
     message: "Do you want to skip any folders or directorys? (ex. .git)",
     default: false
-  },
-  {
+}, {
     type: "checkbox",
     name: "skipFiles",
     message: "Which files/directorys do you want to skip?",
     default: false,
-    when: function(answers){
+    when: function(answers) {
 
-      return answers.skip;
+        return answers.skip;
 
     },
-    choices: function(answers){
+    choices: function(answers) {
 
-      return fs.readdirSync(answers.baseDirectory);
+        return fs.readdirSync(answers.baseDirectory);
 
     }
-  }
-];
+}];
 
-inquirer.prompt( questions, function( options ) {
+inquirer.prompt(questions, function(options) {
 
-  serverfy.convert(options, function(err) {
+    serverfy.convert(options, function(err) {
 
-    if(err) {
-    
-      console.log('ERROR: ' + err);
-    
-    }
-    
-    else {
-    
-      console.log('Please run "npm start" to start application');
-      process.exit();
-    }
+        if (err) {
 
-  });
-  
+            console.log('ERROR: ' + err);
+
+        } else {
+
+            console.log('Please run "npm start" to start application');
+            process.exit();
+        }
+
+    });
+
 });
