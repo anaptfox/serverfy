@@ -1,38 +1,39 @@
 {
-  "name": "serverfy",
-  "description": "Turn a static website directory into a node application",
-  "keywords": [
-    "static"
-  ],
-  "version": "0.0.1",
-  "author": "Taron <taronfoxworth@gmail.com>",
-  "maintainers": [
-    "Taron Foxworth <taronfoxworth@gmail.com>"
-  ],
-  "contributors": [
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/taronfoxworth/serverfy"
-  },
-  "dependencies": {
-    "commander" : "1.1.x",
-    "async" : "0.2.x",
-    "fs-tools": "0.2.x",
-    "glob": "latest",
-    "fs-extra": "latest",
-    "ncp": "latest",
-    "underscore": "latest"
-  },
-  "devDependencies" : {
-    "mocha" : "1.8.x"
-  },
-  "main": "./lib/serverfy",
-  "bin" : {
-    "serverfy": "./bin/serverfy"
-  },
-  "preferGlobal" : true,
-  "engines": {
-    "node": ">= 0.10.0"
-  }
+    "name": "serverfy",
+    "description": "Turn a static website directory into a node application",
+    "keywords": [
+        "static"
+    ],
+    "version": "0.0.1",
+    "author": "Taron <taronfoxworth@gmail.com>",
+    "maintainers": [
+        "Taron Foxworth <taronfoxworth@gmail.com>"
+    ],
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/taronfoxworth/serverfy"
+    },
+    "dependencies": {
+        "commander": "1.1.x",
+        "async": "0.2.x",
+        "fs-tools": "0.2.x",
+        "glob": "latest",
+        "fs-extra": "latest",
+        "ncp": "latest",
+        "inquirer": "latest",
+        "underscore": "latest",
+        "cmdify": "latest"
+    },
+    "devDependencies": {
+        "mocha": "1.8.x"
+    },
+    "main": "./lib/serverfy",
+    "bin": {
+        "serverfy": "./bin/serverfy"
+    },
+    "preferGlobal": true,
+    "engines": {
+        "node": ">= 0.10.0"
+    }
 }
